@@ -2,6 +2,8 @@
 using System.IO.Pipes;
 
 class program { 
+
+    // Ein Kommentar um Git auszuprobieren 
     static double volt = 12;
     static string? answer = "";
     static double gesamtlast = 0;
