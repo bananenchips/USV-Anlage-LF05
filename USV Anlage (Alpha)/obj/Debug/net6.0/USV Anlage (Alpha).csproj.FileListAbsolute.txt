@@ -12,3 +12,17 @@ E:\USV Anlage code\USV Anlage (Alpha)\obj\Debug\net6.0\refint\USV Anlage (Alpha)
 E:\USV Anlage code\USV Anlage (Alpha)\obj\Debug\net6.0\USV Anlage (Alpha).pdb
 E:\USV Anlage code\USV Anlage (Alpha)\obj\Debug\net6.0\USV Anlage (Alpha).genruntimeconfig.cache
 E:\USV Anlage code\USV Anlage (Alpha)\obj\Debug\net6.0\ref\USV Anlage (Alpha).dll
+C:\Users\nicoa\OneDrive\Dokumente\GitHub\USV-Anlage-LF05\USV Anlage (Alpha)\bin\Debug\net6.0\USV Anlage (Alpha).exe
+C:\Users\nicoa\OneDrive\Dokumente\GitHub\USV-Anlage-LF05\USV Anlage (Alpha)\bin\Debug\net6.0\USV Anlage (Alpha).deps.json
+C:\Users\nicoa\OneDrive\Dokumente\GitHub\USV-Anlage-LF05\USV Anlage (Alpha)\bin\Debug\net6.0\USV Anlage (Alpha).runtimeconfig.json
+C:\Users\nicoa\OneDrive\Dokumente\GitHub\USV-Anlage-LF05\USV Anlage (Alpha)\bin\Debug\net6.0\USV Anlage (Alpha).dll
+C:\Users\nicoa\OneDrive\Dokumente\GitHub\USV-Anlage-LF05\USV Anlage (Alpha)\bin\Debug\net6.0\USV Anlage (Alpha).pdb
+C:\Users\nicoa\OneDrive\Dokumente\GitHub\USV-Anlage-LF05\USV Anlage (Alpha)\obj\Debug\net6.0\USV Anlage (Alpha).GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nicoa\OneDrive\Dokumente\GitHub\USV-Anlage-LF05\USV Anlage (Alpha)\obj\Debug\net6.0\USV Anlage (Alpha).AssemblyInfoInputs.cache
+C:\Users\nicoa\OneDrive\Dokumente\GitHub\USV-Anlage-LF05\USV Anlage (Alpha)\obj\Debug\net6.0\USV Anlage (Alpha).AssemblyInfo.cs
+C:\Users\nicoa\OneDrive\Dokumente\GitHub\USV-Anlage-LF05\USV Anlage (Alpha)\obj\Debug\net6.0\USV Anlage (Alpha).csproj.CoreCompileInputs.cache
+C:\Users\nicoa\OneDrive\Dokumente\GitHub\USV-Anlage-LF05\USV Anlage (Alpha)\obj\Debug\net6.0\USV Anlage (Alpha).dll
+C:\Users\nicoa\OneDrive\Dokumente\GitHub\USV-Anlage-LF05\USV Anlage (Alpha)\obj\Debug\net6.0\refint\USV Anlage (Alpha).dll
+C:\Users\nicoa\OneDrive\Dokumente\GitHub\USV-Anlage-LF05\USV Anlage (Alpha)\obj\Debug\net6.0\USV Anlage (Alpha).pdb
+C:\Users\nicoa\OneDrive\Dokumente\GitHub\USV-Anlage-LF05\USV Anlage (Alpha)\obj\Debug\net6.0\USV Anlage (Alpha).genruntimeconfig.cache
+C:\Users\nicoa\OneDrive\Dokumente\GitHub\USV-Anlage-LF05\USV Anlage (Alpha)\obj\Debug\net6.0\ref\USV Anlage (Alpha).dll
