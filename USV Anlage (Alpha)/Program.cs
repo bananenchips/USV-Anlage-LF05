@@ -49,7 +49,7 @@ class program {
     {
         Console.WriteLine("geben sie die Anzahl der Akkus an.");
         double Akkus = Convert.ToDouble(Console.ReadLine());
-        Console.WriteLine("Geben sie die Spannung der Akkus in Volt an.");
+        Console.WriteLine("Geben sie die Spannung der Akkus in Volt an.(insgesamt)");
         try { 
          volt = Convert.ToDouble(Console.ReadLine());
         }catch(Exception)
@@ -64,7 +64,7 @@ class program {
         percent = (100 - percent)/100;
         if (percent <= 0) percent = 1; 
         Console.WriteLine(AkkuVolt+ " * " +  capacity * percent + " / " + gesamtlast);
-        Console.WriteLine(AkkuVolt * capacity * percent / gesamtlast);
+        Console.WriteLine($" Der Akku hält für: {AkkuVolt * capacity * percent / gesamtlast} Stunden");
         return AkkuVolt * capacity * percent / gesamtlast;
     }   
     
