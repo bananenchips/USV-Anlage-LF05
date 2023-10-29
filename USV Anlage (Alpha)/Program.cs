@@ -1,21 +1,113 @@
 ﻿using System;
-using System.IO.Pipes;
 
 class program { 
-
-    // Ein Kommentar um Git auszuprobieren 
     static double volt = 12;
     static string? answer = "";
     static double gesamtlast = 0;
     static double l = 0;
     static double components = 0;
     static double Leistung = 0;
+    static double netzspannung = 230; // Volt
+    static int counter = 0; 
     static void Main(string[] args)
         {
-            Components();
-            Autonom();
+            Menu();
+            Choose();
         }
 
+    static void Menu() {
+        Console.Clear();
+        Console.WriteLine("Willkommen im Menü");
+        Console.WriteLine("Besitzen sie schon eine eingerichtete USV und wollen die");
+        Console.WriteLine("Autonomie Zeit berechnen ? ");
+        Console.WriteLine();
+        Console.WriteLine("Oder wollen sie sich eine USV-Anlage anschaffen und wissen noch nicht");
+        Console.WriteLine("wie viel Leistung diese haben muss?");
+        Console.WriteLine("Wählen sie mit den Pfeiltasten aus und bestätigen sie mit der Enter Taste");
+    }
+    static void Choose()
+    {
+        string pressed = "";
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("Berechnung der Autonomie Zeit");
+        Console.ForegroundColor = ConsoleColor.White;
+        Console.WriteLine("Berechnung der erforderlichen Leistung");
+        Console.WriteLine("Was ist die Autonomie Zeit und wie wird sie berechnet ?");
+        ConsoleKey key = Console.ReadKey().Key;
+        pressed = key.ToString();
+
+        while (pressed != "Enter")
+        {
+            
+
+            if (pressed == "UpArrow")
+            {
+                counter--;
+            }
+            else if (pressed == "DownArrow")
+            {
+                counter++;
+            }
+            counter = counter > 2 ? 0 : counter = counter;
+            counter = counter < 0 ? 2 : counter = counter;
+            switch (counter)
+            {
+                case 0:
+                    Menu();
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Berechnung der Autonomie Zeit");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("Berechnung der erforderlichen Leistung");
+                    Console.WriteLine("Was ist die Autonomie Zeit und wie wird sie berechnet ?");
+                break;
+
+                case 1:
+                    Menu();
+                    Console.WriteLine("Berechnung der Autonomie Zeit");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Berechnung der erforderlichen Leistung");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("Was ist die Autonomie Zeit und wie wird sie berechnet ?");
+                break;
+
+                case 2:
+                    Menu();
+                    Console.WriteLine("Berechnung der Autonomie Zeit");
+                    Console.WriteLine("Berechnung der erforderlichen Leistung");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Was ist die Autonomie Zeit und wie wird sie berechnet ?");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    break;
+            }
+            pressed = "";
+            key = Console.ReadKey().Key;
+            pressed = key.ToString();
+
+        }
+
+        switch (counter)
+        {
+            case 0: Time(); break;
+            case 1: Leistungsbedarf(); break;
+            case 2: Help();  break;
+        }
+    }
+
+    static void Help()
+    {
+        Console.Clear(); 
+        Console.WriteLine("Text einfügen");
+    }
+
+    static void Back()
+    {
+
+    }
+   static void Time()
+    {
+        Components();
+        Autonomie();
+    }
     static void Components() {
          Console.WriteLine("Wie viele Komponenten sind an das System angeschlossen?");
          components = Convert.ToDouble(Console.ReadLine());
@@ -45,7 +137,7 @@ class program {
         }
             gesamtlast = l;    
     }
-    static double Autonom()
+    static double Autonomie()
     {
         Console.WriteLine("geben sie die Anzahl der Akkus an.");
         double Akkus = Convert.ToDouble(Console.ReadLine());
@@ -68,4 +160,14 @@ class program {
         return AkkuVolt * capacity * percent / gesamtlast;
     }   
     
+    static void Leistungsbedarf()
+    {
+        Components(); // Gesamtlast wird errechnet
+
+        double Wirklast = gesamtlast * 0.65; // Umrechnung von VA nach Watt
+        Wirklast = Wirklast * 1.3;           // Leistungsreserve wird verrechnet
+        double Scheinleistung = Wirklast * 1.55;
+
+        Console.WriteLine($"Die USV benötigt mindestens ${Wirklast} W bzw. ${Scheinleistung} VA");
+    }
 }
