@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 
 class program { 
     static double volt = 12;
@@ -97,11 +98,29 @@ class program {
     {
         Console.Clear(); 
         Console.WriteLine("Text einfügen");
+
+        Back();
+        
     }
 
     static void Back()
     {
+        Console.WriteLine("Drücke Escape um zurück zum Hauptmenü zu gelangen");
+        
+        try
+        {
+            ConsoleKey revert = Console.ReadKey().Key;
+            if (revert == ConsoleKey.Escape)
+            {
+                Menu();
+            }
+        }
+        catch 
+        {
 
+        }
+        
+        
     }
    static void Time()
     {
